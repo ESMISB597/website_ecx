@@ -2,7 +2,7 @@
 <title>Product</title>
 <body background ="images/bg22.jpg">
 <?php
-$con = mysql_connect("it2.sut.ac.th","php160_g5","333160");
+$con = mysql_connect("127.0.0.1","php160_g5","333160");
 if (!$con) die ('Could not connect: '. mysql_error());
 mysql_select_db("php160_g5",$con);
 $result = mysql_query("SELECT*FROM product");
