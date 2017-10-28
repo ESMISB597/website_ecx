@@ -1,0 +1,39 @@
+<html>
+<title>User</title>
+<body background="bg5.jpg">
+<font color="#F5F5F5">
+<a href="searchbook.php">
+<img src ="ert.png" width="400" hieght="400" align="right">
+</a>
+<?PHP
+    session_start();
+    error_reporting( error_reporting() & ~E_NOTICE );
+    $name = $_REQUEST['name'];
+    echo $name;
+     
+?><h1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome!</h1>
+<h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="pic.png" width="200" hieght="400">
+<?php 
+$con = mysql_connect("localhost","root","");
+if(!$con) {
+die('ติดต่อฐานข้อมูลไม่ได้'.mysql_error());
+}
+mysql_select_db("book",$con);
+$result = "SELECT * FROM user WHERE use_id = '" . $_SESSION['use_id'] . "'";
+$connectionstring = mysql_query($result,$con);
+while($row = mysql_fetch_array($connectionstring)) 
+{
+echo '<br>';
+echo "Name:"." ".$row['name']." </br>"."Student ID:"." ".$row['student_id']."</br> "."Tel:"." ".$row['tel']."</br> "."Email: "." ".$row['email']." </br>"."Address: "." ".$row['address'];
+echo '</br>';
+}
+mysql_close($con);
+?>
+<br>
+</form>
+</h2>
+</font>
+</body>
+</html>

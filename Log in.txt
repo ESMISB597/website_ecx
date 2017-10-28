@@ -1,0 +1,18 @@
+<html>
+<title>Log in</title>
+<body background="bgbg.jpg">
+<center>
+<img src ="head.jpg" height="200" width="1380">
+<font color="#F5F5F5">
+<br><br><br><br>
+<h1>Log in</h1>
+<br><br>
+<form action="check.php" method="post">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID: <input type="text" name="use_id"><br><br>
+PASSWORD: <input type="password" name="password">
+<br><br><input type="submit" value="Log in">
+</form>
+</center>
+</font>
+</body>
+</html>
